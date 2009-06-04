@@ -1,0 +1,25 @@
+h1. RhegExp
+
+h2. Description
+
+p. A very simple  program to test Ruby regular expression ala http://www.rubular.com/, just locally and offline.
+
+h2. Installation
+
+p. Just place it in a directory of your choice and run rhegexp.rb.
+
+<pre>
+<code>
+$ ./rhegexp.rb
+</code>
+</pre>
+
+h2. Development
+
+p. Modify directly the glade source file at lib/ directory, the ruby-glade-create-template-generated rb in that same directory, and re-generate and run using the rake task.
+
+p. Of course you need to have installed ruby-gnome2 gem and all the associated gems, and of-course^2^, you need to have installed ruby and ruby-gems.
+
+p. You can find a good description of how to install Ruby-GNOME2 0.18.1 in Ubuntu 9.04 Jaunty Jackalope in my blog at "Rha7dotCom Blog":http://rha7dotcom.blogspot.com/2009/06/how-to-install-ruby-gnome2-from-source.html
+
+
