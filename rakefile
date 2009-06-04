@@ -1,0 +1,29 @@
+require 'rake/clean'
+
+%w( resources ).each do |target_name|
+  source = "lib/#{target_name}.glade"
+  target = "lib/#{target_name}.rb"
+
+  file target => [ source ] do
+    puts "Regenerating #{target}, from #{source} ..."
+    system "ruby-glade-create-template #{source} > #{target}"
+    puts "Done."
+    puts
+  end
+  
+  task :regenerate => [ target ]
+
+end
+
+desc "Regenerate Class files from Glade sources."
+task :regenerate
+
+desc "Run the application."
+task :run => [ :regenerate ] do
+  ruby 'rhegexp.rb'
+end
+
+task :default => [ :run ]
+
+
+
